@@ -28,5 +28,17 @@ public class TestCase_2 {
             Thread.sleep(2000);
             driver.quit();
         }
+    @Test
+    public void testCase2(){
+        driver.get("https://practice-cybertekschool.herokuapp.com/");
+        WebElement registrationForm = driver.findElement(By.linkText("Registration Form"));
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView(true);",registrationForm);
+        registrationForm.click();
+        List<WebElement> programmingLanguageCheckboxes = driver.findElements(By.xpath("//*[@class='form-check form-check-inline']"));
+        for (WebElement checkbox : programmingLanguageCheckboxes) {
+            Assert.assertTrue(checkbox.isDisplayed(),"verify checkboxes are displayed");
+        }
 
+}
 }
