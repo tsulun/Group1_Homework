@@ -24,7 +24,7 @@ public class TestCase_9 {
         public void tearDown() throws InterruptedException {
 
         Thread.sleep(3000);
-        driver.manage().window().maximize();
+        driver.quit();
 
     }
 
