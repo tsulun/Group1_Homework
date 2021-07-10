@@ -41,6 +41,10 @@ public class TestCase_9 {
         twoHundred.click();
 
 
+        WebElement text = driver.findElement(By.xpath("//div[@class='example']/p"));
+        String text3 = text.getText();
+
+        System.out.println("Message displayed: " + text3);
 
 
 
